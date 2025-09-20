@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online shoping in Bangladesh:Order Now from daraz.com.bd</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      .container {
+        max-width: 1400px;
+        margin: auto;
+      }
+      .slider-track {
+        transition: transform 0.3s cubic-bezier(0.22, 0.9, 0.32, 1);
+        will-change: transform;
+      }
+      .category > div {
+        cursor: pointer;
+      }
+      .fourth>section>div{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        justify-content: space-around;
+        cursor: pointer;
+      }
+      .category > div:hover, .fourth>section>div:hover{
+        box-shadow: 1px 1px 5px gray;
+        transition: all 0.1s ease;
+      }
+    </style>
+  </head>
+  <body class="container bg-[#f5f5f5]">
+    <nav class="bg-orange-500 w-full h-30">
+      <section
+        class="h-10 flex w-full justify-center sm:justify-end p-2 gap-10"
+      >
+        <p class="uppercase text-white text-sm">save more on app</p>
+        <p class="uppercase text-white text-sm">become a seller</p>
+        <p class="uppercase hidden sm:block text-white text-sm">
+          help and support
+        </p>
+        <p class="uppercase text-white text-sm">login</p>
+        <p class="uppercase text-white hidden sm:block text-sm">sign up</p>
+        <p class="uppercase hidden sm:block text-white text-sm">ভাষা</p>
+      </section>
+      <section class="w-full p-5 h-20 flex items-center justify-start gap-10">
+        <img class="h-[80%] hidden sm:block" src="./images/logo.png" alt="" />
+        <div class="grow-2 gap-5 flex justify-start h-full items-center">
+          <form
+            action=""
+            class="bg-white px-3 h-full grow flex justify-between items-center"
+          >
+            <input
+              class="border-none outline-0"
+              autocomplete="off"
+              type="text"
+              placeholder="search in daraz"
+            />
+            <i
+              class="text-orange-300 cursor-pointer fa-solid fa-magnifying-glass"
+            ></i>
+          </form>
+          <i class="text-white fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="grow-1"></div>
+      </section>
+    </nav>
+    <main class="container">
+      <section class="first-sec justify-center flex mx-5">
+        <div class="w-full basis-full sm:basis-[80%]">
+          <div id="slider" class="relative bg-white overflow-hidden shadow-2xl">
+            <div class="relative h-64 sm:h-80 md:h-96 overflow-hidden">
+              <div id="track" class="slider-track flex h-full">
+                <div class="flex-shrink-0 w-full h-full">
+                  <img
+                    src="./images/slider1.avif"
+                    alt="Slide 1"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="flex-shrink-0 w-full h-full">
+                  <img
+                    src="./images/slider2.avif"
+                    alt="Slide 2"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="flex-shrink-0 w-full h-full">
+                  <img
+                    src="./images/slider3.avif"
+                    alt="Slide 3"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="flex-shrink-0 w-full h-full">
+                  <img
+                    src="./images/slider4.avif"
+                    alt="Slide 4"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="flex-shrink-0 w-full h-full">
+                  <img
+                    src="./images/slider5.avif"
+                    alt="Slide 4"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="flex-shrink-0 w-full h-full">
+                  <img
+                    src="./images/slider6.avif"
+                    alt="Slide 4"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+
+              <!-- Prev / Next buttons -->
+              <button
+                id="prev"
+                aria-label="Previous"
+                class="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/80 hover:bg-white rounded-full shadow"
+              >
+                <svg
+                  class="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <button
+                id="next"
+                aria-label="Next"
+                class="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2 bg-white/80 hover:bg-white rounded-full shadow"
+              >
+                <svg
+                  class="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Dots / pagination -->
+            <div id="dots" class="flex justify-center gap-2 p-3 bg-white/80">
+              <!-- Dots generated by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="w-full hidden lg:block lg:basis-[20%]">
+          <img class="w-full cursor-pointer" src="images/sec1-img.jpg" alt="" />
+        </div>
+      </section>
+      <section class="second mt-15 mx-5">
+        <h1 class="text-2xl mb-2">Flash Sale</h1>
+        <div class="card-on-sale bg-white p-3">
+          <section
+            class="w-full flex border-b-2 border-gray-200 items-center justify-between"
+          >
+            <p class="text-orange-400">On Sale Now</p>
+            <button
+              class="uppercase border-orange-400 text-sm text-orange-400 border-2 p-2"
+            >
+              shop all products
+            </button>
+          </section>
+          <section
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-1"
+          >
+            <div
+              class="cursor-pointer hover:border hover:border-gray-300 rounded-sm"
+            >
+              <img class="w-full" src="images/sale-img1.avif" alt="" />
+              <p class="m-2">Arabic aura watch</p>
+              <p class="text-orange-400 text-xl m-2">$285</p>
+              <div class="flex text-sm gap-2 m-2">
+                <p class="line-through text-gray-400">$1,999</p>
+                <p>-86%</p>
+              </div>
+            </div>
+
+            <div
+              class="cursor-pointer hover:border hover:border-gray-300 rounded-sm"
+            >
+              <img class="w-full" src="images/sale-img2.avif" alt="" />
+              <p class="m-2">Harpic toilet cleaner</p>
+              <p class="text-orange-400 text-xl m-2">$359</p>
+              <div class="flex text-sm gap-2 m-2">
+                <p class="line-through text-gray-400">$470</p>
+                <p>-24%</p>
+              </div>
+            </div>
+
+            <div
+              class="cursor-pointer hover:border hover:border-gray-300 rounded-sm"
+            >
+              <img class="w-full" src="images/sale-img3.avif" alt="" />
+              <p class="m-2">Smart executive office chair...</p>
+              <p class="text-orange-400 text-xl m-2">$3,470</p>
+              <div class="flex text-sm gap-2 m-2">
+                <p class="line-through text-gray-400">$4,500</p>
+                <p>-23%</p>
+              </div>
+            </div>
+
+            <div
+              class="cursor-pointer hover:border hover:border-gray-300 rounded-sm"
+            >
+              <img class="w-full" src="images/sale-img4.avif" alt="" />
+              <p class="m-2">Powerful Handheld Massage Gun for Deep..</p>
+              <p class="text-orange-400 text-xl m-2">$1,120</p>
+              <div class="flex text-sm gap-2 m-2">
+                <p class="line-through text-gray-400">$2,100</p>
+                <p>-47%</p>
+              </div>
+            </div>
+
+            <div
+              class="cursor-pointer hover:border hover:border-gray-300 rounded-sm"
+            >
+              <img class="w-full" src="images/sale-img5.avif" alt="" />
+              <p class="m-2 capitalize">Mini Electric rice cooker</p>
+              <p class="text-orange-400 text-xl m-2">$635</p>
+              <div class="flex text-sm gap-2 m-2">
+                <p class="line-through text-gray-400">$1,275</p>
+                <p>-50%</p>
+              </div>
+            </div>
+
+            <div
+              class="cursor-pointer hover:border hover:border-gray-300 rounded-sm"
+            >
+              <img class="w-full" src="images/sale-img6.avif" alt="" />
+              <p class="m-2 capitalize">Airpod pro 2nd generation</p>
+              <p class="text-orange-400 text-xl m-2">$247</p>
+              <div class="flex text-sm gap-2 m-2">
+                <p class="line-through text-gray-400">$2,000</p>
+                <p>-88%</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="third mt-10 bg-white mx-5">
+        <h1 class="text-2xl mb-2">Categories</h1>
+        <section
+          class="category grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"
+        >
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg1.avif" alt="" />
+            <p class="capitalize">High School</p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg2.avif" alt="" />
+            <p class="capitalize">monoculars</p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg3.avif" alt="" />
+            <p class="capitalize">kitchen fitting</p>
+          </div>
+
+          <div
+            class="p-3 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg4.avif" alt="" />
+            <p class="capitalize">womens fashion</p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg5.avif" alt="" />
+            <p class="capitalize">goat</p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg6.avif" alt="" />
+            <p class="capitalize text-center">watches and accessories</p>
+          </div>
+
+          <div
+            class="p-2 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg7.avif" alt="" />
+            <p class="capitalize text-center">
+              watering systems & garden horses
+            </p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg8.avif" alt="" />
+            <p class="capitalize">bedding sets</p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg9.avif" alt="" />
+            <p class="capitalize">pools</p>
+          </div>
+
+          <div
+            class="p-2 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg10.avif" alt="" />
+            <p class="capitalize text-center">lotion, creams and scrubs</p>
+          </div>
+
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg11.avif" alt="" />
+            <p class="capitalize text-center">digital downloads</p>
+          </div>
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg12.avif" alt="" />
+            <p class="capitalize text-center">cufflinks</p>
+          </div>
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg13.avif" alt="" />
+            <p class="capitalize text-center">power sanders</p>
+          </div>
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg14.avif" alt="" />
+            <p class="capitalize text-center">kitchen fittings</p>
+          </div>
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg15.avif" alt="" />
+            <p class="capitalize text-center">bedding sets</p>
+          </div>
+          <div
+            class="p-5 border border-gray-300 flex flex-col justify-center items-center gap-2"
+          >
+            <img class="w-[60%]" src="images/catergoryImg16.avif" alt="" />
+            <p class="capitalize text-center">bathroom lighting</p>
+          </div>
+        </section>
+      </section>
+      <section class="fourth mx-5 mt-10">
+        <h1 class="capitalize">Just For You</h1>
+        <section class="for-me grid gap-5 grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 w-full">
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg2.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg3.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg4.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+          <div>
+            <img class="w-full" src="images/formeImg1.avif" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="text-orange-400 text-xl">$69</p>
+          </div>
+        </section>
+      </section>
+      <div class="w-full flex justify-center">
+        <button class="uppercase cursor-pointer mb-10 inline-block border-sky-400 text-sky-400 mt-10 px-30 py-2 border-1">load more</button>
+      </div>
+    </main>
+    <footer class="mt-20 container">
+
+      <section class="mb-10 px-5 w-full grid grid-cols-1 gap-5 sm:grid-cols-4">
+        <div class="flex flex-col">
+          <h1 class="text-xl mb-3">Customer Care</h1>
+          <a class="text-sm hover:underline duration-75" href="#">Help Center</a>
+          <a class="text-sm hover:underline duration-75" href="#">How to Buy</a>
+          <a class="text-sm hover:underline duration-75" href="#">Returns & refunds</a>
+          <a class="text-sm hover:underline duration-75" href="#">Contact Us</a>
+          <a class="text-sm hover:underline duration-75" href="#">Terms & Conditions</a>
+          <a class="text-sm hover:underline duration-75" href="#">CCMS: Central Complain Management System</a>
+        </div>
+        <div class="flex flex-col">
+          <h1 class="text-xl mb-3">Daraz</h1>
+          <a class="text-sm hover:underline duration-75" href="#">About Daraz</a>
+          <a class="text-sm hover:underline duration-75" href="#">Digital payments</a>
+          <a class="text-sm hover:underline duration-75" href="#">Daraz cards</a>
+          <a class="text-sm hover:underline duration-75" href="#">Daraz blog</a>
+          <a class="text-sm hover:underline duration-75" href="#">Daraz Cares</a>
+          <a class="text-sm hover:underline duration-75" href="#">Privacy policy</a>
+          <a class="text-sm hover:underline duration-75" href="#">Daraz app</a>
+          <a class="text-sm hover:underline duration-75" href="#">Daraz Exclusive</a>
+        </div>
+        <div class="flex gap-5">
+          <img class="w-15 h-15" src="images/footerlogo.png" alt="">
+          <div>
+            <p class="text-orange-400 text-xl">Happy Shopping</p>
+            <p>Download App</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2">
+          <img class="cursor-pointer" src="images/appstore.png" alt="">
+          <img class="cursor-pointer" src="images/googleplay.png" alt="">
+          <img class="cursor-pointer" src="images/appgallery.png" alt="">
+        </div>
+      </section>
+      <section class="h-10 bg-white flex flex-col justify-center">
+        <section class="flex justify-between px-3">
+          <p class="text-xl">Daraz International</p>
+          <p class="text-xl">Follow Us</p>
+          <p class="text-sm text-gray-400">c Daraz 2025</p>
+        </section>
+      </section>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
